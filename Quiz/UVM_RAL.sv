@@ -292,14 +292,7 @@ module tb_top_reg_block;
 
         // Ejemplo de acceso: escribir y leer registros
         // Escribir en CTRL
-        reg_block_inst.default_map.write('h0000, 32'hA5A5A5A5, .status());
-        // Leer STATUS
-        reg_block_inst.default_map.read('h000C, .value(), .status());
-
-        // Escribir en IRQEN
-        reg_block_inst.default_map.write('h00F0, 32'h0000001F, .status());
-        // Escribir en IRQ (W1C)
-        reg_block_inst.default_map.write('h00F4, 32'h0000001F, .status());
+       
 
         // Finalizar simulación
         $finish;
